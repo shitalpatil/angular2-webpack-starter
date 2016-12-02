@@ -4,3 +4,7 @@ bower_components/
 
 build/
 dist/
+
+# Node Files #
+/node_modules
+/bower_components
