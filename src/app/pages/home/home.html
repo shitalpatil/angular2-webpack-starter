@@ -1,11 +1,35 @@
-<div class="jumbotron">
-    Home Module
-    <!--<login>Trying lOGIN..</login>-->
-    <h2>Home</h2> Title variable =>
-    <ul>
-        <li>Array from Service Iterated...</li>
-        <li>
+<div class="container">
+    <div class=”row”>
 
-        </li>
-    </ul>
+        <!--<login>Trying lOGIN..</login>-->
+        <h2>Home</h2>
+
+        <div class=”col-md-12″>{{ title }}<input type="text" [(ngModel)]='searchTerm' />{{searchTerm}}</div>
+    </div>
+
+    <div class=”row”>
+       <div class=”col-md-12″>
+               <table class="table">
+                   <thead>
+                   <tr>
+                       <th>#</th>
+                       <th>First Name</th>
+                       <th>Last Name</th>
+                       <th>Username</th>
+                   </tr>
+                   </thead>
+
+                   <tbody>
+                   <tr *ngFor="let name of names | listFilter:searchTerm">
+                       <td>{{name.id}}</td>
+                       <td>{{name.firstName}}</td>
+                       <td>{{name.lastName}}</td>
+                       <td>{{name.userName}}</td>
+                   </tr>
+
+                   </tbody>
+               </table>
+       </div>
+    </div>
+
 </div>

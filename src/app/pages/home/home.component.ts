@@ -3,17 +3,18 @@
  */
 import {Component} from '@angular/core';
 import {HomeService} from './home.service'
+import {Name} from "./NameModel";
 @Component({
     selector : 'home',
     templateUrl: './home.html',
     
+    
 })
 export class HomeComponent {
-    title = "The title of home"
-    
-    constructor() {
-        /*this.names = homeService.getNames();
-        this.userName = homeService.getUserName();
-        this.password = homeService.getPassword();*/
+    title = "Search:"
+    searchTerm: string
+    names : Name[];
+    constructor(homeService : HomeService) {
+        this.names = homeService.getNames();
     }
 }
