@@ -10,10 +10,11 @@ import { FormsModule } from '@angular/forms';
  * Created by skpatil on 12/8/2016.
  */
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule,FormsModule ],
      declarations: [
-
+        HomeComponent,ListFilter
     ],
+    exports:[HomeComponent],
     providers:[HomeService]
 })
 export class HomeModule { }

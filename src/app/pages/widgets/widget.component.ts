@@ -1,11 +1,16 @@
 /**
  * Created by skpatil on 12/14/2016.
  */
-import {Component} from '@angular/core';
+import {Component,Input} from '@angular/core';
+import {WidgetData} from "../board/WidgetData";
 @Component({
     selector : 'widget',
     templateUrl: './widget.html',
 })
 export class WidgetComponent {
-    constructor(){}
+    test:string;
+    @Input() widgetData:WidgetData
+    constructor(){
+        this.test='This is test';
+    }
 }

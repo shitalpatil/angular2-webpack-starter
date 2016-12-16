@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngFor="let widgetData of widgetDataList; let i of index">
+
+                    <widget [widgetData]="widgetData">Loading...</widget>
+            </div>
+        </div>
+    </div>
+</div>

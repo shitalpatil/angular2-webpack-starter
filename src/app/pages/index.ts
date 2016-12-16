@@ -5,3 +5,4 @@ export * from './home/home.module';
 export * from './home/home.component';
 export * from './login/login.component';
 export * from './widgets/widget.component';
+export * from './board/board.component';
